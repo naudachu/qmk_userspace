@@ -78,12 +78,24 @@ enum macro_keycodes {
 #define ENT_LWR LT(_LOWER, KC_ENT)
 #define ESC_LWR LT(_LOWER, KC_ESC)
 
+// trying tap-mod for homerow
+#define D_ALT MT(MOD_RALT, KC_D)
+#define F_CTL MT(MOD_RCTL, KC_F)
+#define G_GUI MT(MOD_RGUI, KC_G)
+
+#define K_ALT MT(MOD_RALT, KC_K)
+#define J_CTL MT(MOD_RCTL, KC_J)
+#define H_GUI MT(MOD_RGUI, KC_H)
+
+
+
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [_QWERTY] = LAYOUT(  
+  [_QWERTY] = LAYOUT(
   //,-----------------------------------------------------------------.                         ,-----------------------------------------------------------------.
          KC_GRV,      KC_Q,      KC_W,      KC_E,      KC_R,      KC_T,                                KC_Y,      KC_U,      KC_I,      KC_O,      KC_P,   KC_LBRC,
   //|----------+----------+----------+----------+----------+----------|                         |----------+----------+----------+----------+----------+----------|
-       CAPS_LCT,      KC_A,      KC_S,      KC_D,      KC_F,      KC_G,                                KC_H,      KC_J,      KC_K,      KC_L,   KC_SCLN, LGUI_QUOT,
+       CAPS_LCT,      KC_A,      KC_S,     D_ALT,     F_CTL,     G_GUI,                               H_GUI,     J_CTL,     K_ALT,      KC_L,   KC_SCLN, LGUI_QUOT,
   //|----------+----------+----------+----------+----------+----------|                         |----------+----------+----------+----------+----------+----------|
         KC_LALT,      KC_Z,      KC_X,      KC_C,      KC_V,      KC_B,                                KC_N,      KC_M,   KC_COMM,    KC_DOT,   KC_SLSH,   BSL_RAL,
   //|----------+----------+----------+----------+----------+----------+----------|   |----------+----------+----------+----------+----------+----------+----------|
